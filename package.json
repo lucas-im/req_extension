@@ -1,0 +1,22 @@
+{
+  "name": "coupang_play_plus",
+  "version": "1.0.0",
+  "description": "features, urls to cws, privacy policy",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack",
+    "build": "npm run prod && npm run zip"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^6.1.2",
+    "html-webpack-plugin": "^5.3.2",
+    "lodash": "^4.17.21",
+    "webpack": "^4.44.1",
+    "webpack-chrome-extension-reloader": "^1.1.2",
+    "webpack-cli": "^3.2.1"
+  }
+}
