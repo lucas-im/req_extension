@@ -26,13 +26,15 @@ module.exports = function (env, { mode = 'development' }) {
       },
       plugins: [
         development && new ChromeExtensionReloader(),
-        new CopyWebpackPlugin({patterns:[
-          { from: './manifest.json', to: 'manifest.json', toType: 'file' },
-          { from: './popup.html', to: 'popup.html', toType: 'file' },
-          { from: './player_functions.js', to: 'player_functions.js', toType: 'file' },
-          { from: './res/', to: 'res', toType: 'dir' },
-          { from: './lib/', to: 'lib', toType: 'dir' }
-        ]})
-      ]}),
+        new CopyWebpackPlugin({
+          patterns: [
+            { from: './manifest.json', to: 'manifest.json', toType: 'file' },
+            { from: './popup.html', to: 'popup.html', toType: 'file' },
+            { from: './res/', to: 'res', toType: 'dir' },
+            { from: './lib/', to: 'lib', toType: 'dir' }
+          ]
+        })
+      ]
+    }),
   ]
 }

@@ -1,7 +1,7 @@
 {
-  "name": "coupang_play_plus",
+  "name": "req-extension",
   "version": "1.0.0",
-  "description": "features, urls to cws, privacy policy",
+  "description": "extension that sends requests and save results as json",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack",

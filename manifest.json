@@ -1,26 +1,27 @@
 {
-  "manifest_version": 2,
-  "name": "Coupang Play Plus",
-  "version": "0.1",
-  "description": "show coupang play's content ratings and apply some small but useful modifications.",
-  "browser_action": {
-    "default_title": "Coupang Play Plus",
+  "manifest_version": 3,
+  "name": "req_extension",
+  "version": "1.0.0",
+  "description": "extension that sends requests and save results as json",
+  "action": {
+    "default_title": "req-extension",
     "default_popup": "popup.html"
   },
   "content_scripts": [
-  {
-    "matches": [
-      "https://www.coupangplay.com/*",
-      "https://openapi.naver.com/*"
-    ],
-    "js": ["background.js"],
-    "run_at": "document_start"
-  }
+    {
+      "matches": [
+        "https://*.google.com/*"
+      ],
+      "js": [
+        "background.js"
+      ],
+      "run_at": "document_start"
+    }
   ],
-  "icons": { "16": "res/icon16.png", "48":"res/icon48.png"},
   "permissions": [
-    "https://www.coupangplay.com/*",
-    "https://openapi.naver.com/*",
     "storage"
+  ],
+  "host_permissions": [
+    "https://*.google.com/*"
   ]
 }
